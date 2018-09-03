@@ -12,11 +12,15 @@ Note that you can get the lastest Windows 10 and SDK preview from [Windows Insid
 
 ![winml app](aoe-winmlapp.png)
 
+> App may not run properly on Azure VM (Windows 10 preview)
+
 ## CelebWinml
 
 Celebrity face recognition app using exported onnx model from Customvision.ai
 
->> There is an export bug in [Customvision.ai](https://customvision.ai/), you need first export to `coreml` then covert to `coreml` to `onnx` using `winmltool` or [Visual Studio AI Tools](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017) .
+> There is an export bug in [Customvision.ai](https://customvision.ai/), you need first export to `coreml` then covert to `coreml` to `onnx` using `winmltool` or [Visual Studio AI Tools](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017).
+
+Test with celebrity images in `Samples` folder.
 
 ## HangulWinml
 
@@ -27,13 +31,13 @@ Original tensorflow model can be found in [tensorflow-hangul-recognition](https:
 Note that the model in this app was trained 10,000 steps with only 4 fonts. The overall recognition performance is not good.
 You can futher improve the model by increased the number of font types and training steps.
 
+You can save and load handwritten character images for testing.
+
 ## How to run
 
 - Open VS solution and select a project
 - Target latest SDK.
 - Build and run as "x64" platform.
-
->> App may not run properly on Azure VM (Windows 10 preview)
 
 ## Reference
 
