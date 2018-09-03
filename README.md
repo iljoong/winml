@@ -39,6 +39,8 @@ You can save and load handwritten character images for testing.
 - Target latest SDK.
 - Build and run as "x64" platform.
 
+> Do not replace `celebrity.cs` and `hangul.cs` file when you open solution first time.
+
 ## Reference
 
 - [Windows ML](https://docs.microsoft.com/en-us/windows/ai/)
