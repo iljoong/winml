@@ -90,6 +90,10 @@ namespace HangulWinml
             long[] shape = { 1, 4096 };
             charInput.input00 = TensorFloat.CreateFromArray(shape, fbuff);
 
+            var dummy = new float[1];
+            long[] dummy_shape = { };
+            charInput.keep_prob = TensorFloat.CreateFromArray(dummy_shape, dummy);
+
             //Evaluate the model
             charOuput = await charModel.EvaluateAsync(charInput);
 
