@@ -11,6 +11,7 @@ namespace HangulWinml
     public sealed class hangulInput
     {
         public TensorFloat input00; // shape(1,4096)
+        public TensorFloat keep_prob;
     }
     
     public sealed class hangulOutput
@@ -34,6 +35,7 @@ namespace HangulWinml
         public async Task<hangulOutput> EvaluateAsync(hangulInput input)
         {
             binding.Bind("input:0", input.input00);
+            binding.Bind("keep_prob:0", input.keep_prob);
             var result = await session.EvaluateAsync(binding, "0");
             var output = new hangulOutput();
             output.output00 = result.Outputs["output:0"] as TensorFloat;
